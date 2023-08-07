@@ -1,0 +1,59 @@
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+data/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+.idea/
+
+# Build and package files
+node_modules/
+bower_components/
+dist/
+build/
+*.dll
+*.exe
+*.o
+*.so
+*.dylib
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+
+# Ignore npm debug files
+npm-debug.log
+
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore Java compiled files
+*.class
+
+# Ignore compiled SASS files
+*.css.map
+*.scss.map
+
+# Model ckpt
+ckpts/
+
+# Project related folders
+docker/
+mmdetection3d/
+result_vis/
+test/
+work_dirs/

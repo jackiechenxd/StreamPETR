@@ -581,9 +581,9 @@ class StreamPETRHead(AnchorFreeHead):
         self.pre_update_memory(data)
 
         x = data['img_feats']
-        B, N, C, H, W = x.shape
+        B, N, C, H, W = x.shape # [2, 6, 256, 16, 44]
         num_tokens = N * H * W
-        memory = x.permute(0, 1, 3, 4, 2).reshape(B, num_tokens, C)
+        memory = x.permute(0, 1, 3, 4, 2).reshape(B, num_tokens, C) # B, N * H * W, C
         memory = topk_gather(memory, topk_indexes)
 
         pos_embed, cone = self.position_embeding(data, memory_center, topk_indexes, img_metas)
